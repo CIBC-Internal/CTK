@@ -1161,3 +1161,16 @@ add_subdirectory( Documentation )
 # This directory is typically the last SUBDIRS in the main CMakeLists.txt.
 add_subdirectory(CMake/LastConfigureStep)
 
+#--------------
+# SCIRun config
+#--------------
+
+SET(SCI_CTK_INCLUDE "${CMAKE_SOURCE_DIR}/Libs")
+SET(SCI_CTK_LIBRARY ctk CACHE INTERNAL "CTK library" FORCE)
+
+set(SCI_CTK_LIBRARY_DIR ${CMAKE_CURRENT_BINARY_DIR}/src)
+set(CTK_USE_FILE "${CMAKE_CURRENT_SOURCE_DIR}/UseCtk.cmake")
+
+CONFIGURE_FILE("${CMAKE_SOURCE_DIR}/CMake/CtkConfig1.cmake.in"
+  "${CMAKE_BINARY_DIR}/CtkConfig.cmake" @ONLY IMMEDIATE)
+EXPORT(TARGETS ${SCI_CTK_LIBRARY} FILE CtkExports.cmake)

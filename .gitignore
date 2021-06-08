@@ -10,3 +10,5 @@ CMakeLists.txt.user*
 
 # ignore ctags file
 tags
+
+.DS_Store

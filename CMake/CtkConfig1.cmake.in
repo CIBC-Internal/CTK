@@ -1,0 +1,9 @@
+#-----------------------------------------------------------------------------
+#
+# CtkConfig.cmake - Ctk CMake configuration file for external projects.
+
+
+SET(SCI_CTK_INCLUDE "@SCI_CTK_INCLUDE@")
+SET(SCI_CTK_LIBRARY "@SCI_CTK_LIBRARY@")
+set(SCI_CTK_LIBRARY_DIR "@SCI_CTK_LIBRARY_DIR@")
+set(CTK_USE_FILE "@CTK_USE_FILE@")
