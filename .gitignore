@@ -12,3 +12,4 @@ CMakeLists.txt.user*
 tags
 
 .DS_Store
+bin/*
